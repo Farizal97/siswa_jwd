@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Direktori Siswa - SiswaKita</title>
+  <link rel="stylesheet" href="asssets/css/style.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <div class="brand-box">
+        <div class="sidebar-brand-icon" aria-hidden="true">&#10022;</div>
+        <div>
+          <div class="brand-title">SiswaKita</div>
+          <div class="brand-subtitle">Portal Akademik</div>
+        </div>
+      </div>
+
+      <div class="menu-section">
+        <p class="menu-heading">Menu Utama</p>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link-custom active" aria-current="page"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3"></circle><path d="M3.5 19v-1.5a5.5 5.5 0 0 1 11 0V19h-11ZM16 5.5a3 3 0 0 1 0 5.8M18 14a5 5 0 0 1 2.5 4.3V19H17"></path></svg><span>Direktori Siswa</span></a></li>
+          <li><a href="registrasi.html" class="nav-link-custom"><svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14"></path></svg><span>Registrasi Baru</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="help-box">
+        <div class="help-badge"><svg class="ui-icon" aria-hidden="true" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.25"></circle><path d="M8 7.25v4M8 4.75h.01"></path></svg></div>
+        <div>
+          <div class="help-title">Butuh bantuan?</div>
+          <div class="help-subtitle">Hubungi tim akademik</div>
+        </div>
+      </div>
+
+      <div class="admin-box">
+        <div class="admin-avatar">AR</div>
+        <div>
+          <div class="admin-name">Admin Registrar</div>
+          <div class="admin-role">Administrator</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-wrapper">
+    <div>
+      <header class="topbar">
+        <nav class="breadcrumb-custom" aria-label="Breadcrumb">
+          <span>Portal Akademik</span>
+          <svg class="ui-icon breadcrumb-icon" aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="m6 3 5 5-5 5"></path></svg>
+          <span class="breadcrumb-active">Direktori Siswa</span>
+        </nav>
+        <div class="tahun-box">
+          <div class="tahun-label">Tahun Ajaran</div>
+          <div class="tahun-value">2024 / 2025</div>
+        </div>
+      </header>
+
+      <main class="content-container">
+        <div class="page-header">
+          <div>
+            <div class="page-eyebrow">Data Siswa</div>
+            <h1 class="page-title">Direktori Siswa</h1>
+            <p class="page-subtitle">Kelola dan temukan seluruh data siswa dalam satu tempat.</p>
+          </div>
+          <a href="registrasi.html" class="btn-primary-custom"><svg class="ui-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14"></path></svg>Tambah siswa</a>
+        </div>
+
+        <!-- Stat Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon icon-blue"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3"></circle><path d="M3.5 19v-1.5a5.5 5.5 0 0 1 11 0V19h-11ZM16 5.5a3 3 0 0 1 0 5.8M18 14a5 5 0 0 1 2.5 4.3V19H17"></path></svg></div>
+            <div>
+              <div class="stat-number">1.248</div>
+              <div class="stat-label">Total siswa</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon icon-green"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7"></path></svg></div>
+            <div>
+              <div class="stat-number">1.186</div>
+              <div class="stat-label">Siswa aktif</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon icon-amber"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M12 7v14M12 7C10.7 5.7 8.8 5 6 5H3v14h4c2.2 0 3.8.6 5 2m0-14c1.3-1.3 3.2-2 6-2h3v14h-4c-2.2 0-3.8.6-5 2"></path></svg></div>
+            <div>
+              <div class="stat-number">4</div>
+              <div class="stat-label">Program keahlian</div>
+            </div>
+          </div>
+        </div>
+ <!-- Table Card -->
+        <div class="table-card">
+          <div class="filter-bar">
+            <input type="text" id="searchInput" class="search-input" placeholder="Cari nama, kode, atau alamat...">
+            <select id="jurusanFilter" class="jurusan-select">
+              <option value="ALL">Semua jurusan</option>
+              <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+              <option value="Teknik Komputer & Jaringan">Teknik Komputer & Jaringan</option>
+              <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+              <option value="Manajemen Perkantoran">Manajemen Perkantoran</option>
+            </select>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table-custom">
+              <thead>
+                <tr>
+                  <th>Siswa</th>
+                  <th>Kode</th>
+                  <th>Domisili</th>
+                  <th>Tanggal Lahir</th>
+                  <th>Jurusan</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="student-row" data-jurusan="Rekayasa Perangkat Lunak">
+                  <td>
+                    <div class="student-info">
+                      <div class="avatar-circle av-blue">AP</div>
+                      <div>
+                        <div class="student-name">Alya Putri Ramadhani</div>
+                        <div class="student-angkatan">Angkatan 2024</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>SIS-24001</td>
+                  <td>Bandung, Jawa Barat</td>
+                  <td>12 Apr 2007</td>
+                  <td><strong>Rekayasa Perangkat Lunak</strong></td>
+                  <td><span class="badge-aktif"><span class="dot-green"></span> Aktif</span></td>
+                  <td><svg class="ui-icon row-chevron" aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="m6 3 5 5-5 5"></path></svg></td>
+                </tr>
+
+                <tr class="student-row" data-jurusan="Teknik Komputer & Jaringan">
+                  <td>
+                    <div class="student-info">
+                      <div class="avatar-circle av-sky">BA</div>
+                      <div>
+                        <div class="student-name">Bima Aditya Pratama</div>
+                        <div class="student-angkatan">Angkatan 2024</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>SIS-24002</td>
+                  <td>Bogor, Jawa Barat</td>
+                  <td>28 Nov 2006</td>
+                  <td><strong>Teknik Komputer & Jaringan</strong></td>
+                  <td><span class="badge-aktif"><span class="dot-green"></span> Aktif</span></td>
+                  <td><svg class="ui-icon row-chevron" aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="m6 3 5 5-5 5"></path></svg></td>
+                </tr>
+
+                <tr class="student-row" data-jurusan="Desain Komunikasi Visual">
+                  <td>
+                    <div class="student-info">
+                      <div class="avatar-circle av-blue">CL</div>
+                      <div>
+                        <div class="student-name">Citra Lestari Wijaya</div>
+                        <div class="student-angkatan">Angkatan 2024</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>SIS-24003</td>
+                  <td>Jakarta Selatan, DKI Jakarta</td>
+                  <td>19 Jan 2007</td>
+                  <td><strong>Desain Komunikasi Visual</strong></td>
+                  <td><span class="badge-aktif"><span class="dot-green"></span> Aktif</span></td>
+                  <td><svg class="ui-icon row-chevron" aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="m6 3 5 5-5 5"></path></svg></td>
+                </tr>
+
+                <tr class="student-row" data-jurusan="Rekayasa Perangkat Lunak">
+                  <td>
+                    <div class="student-info">
+                      <div class="avatar-circle av-blue">DR</div>
+                      <div>
+                        <div class="student-name">Daffa Rizky Maulana</div>
+                        <div class="student-angkatan">Angkatan 2023</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>SIS-23018</td>
+                  <td>Depok, Jawa Barat</td>
+                  <td>05 Jul 2006</td>
+                  <td><strong>Rekayasa Perangkat Lunak</strong></td>
+                  <td><span class="badge-aktif"><span class="dot-green"></span> Aktif</span></td>
+                  <td><svg class="ui-icon row-chevron" aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="m6 3 5 5-5 5"></path></svg></td>
+                </tr>
+
+                <tr class="student-row" data-jurusan="Manajemen Perkantoran">
+                  <td>
+                    <div class="student-info">
+                      <div class="avatar-circle av-amber">EN</div>
+                      <div>
+                        <div class="student-name">Eka Nur Safitri</div>
+                        <div class="student-angkatan">Angkatan 2023</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>SIS-23027</td>
+                  <td>Bekasi, Jawa Barat</td>
+                  <td>14 Sep 2006</td>
+                  <td><strong>Manajemen Perkantoran</strong></td>
+                  <td><span class="badge-cuti"><span class="dot-amber"></span> Cuti</span></td>
+                  <td><svg class="ui-icon row-chevron" aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="m6 3 5 5-5 5"></path></svg></td>
+                </tr>
+
+                <tr class="student-row" data-jurusan="Teknik Komputer & Jaringan">
+                  <td>
+                    <div class="student-info">
+                      <div class="avatar-circle av-blue">FA</div>
+                      <div>
+                        <div class="student-name">Fajar Alamsyah</div>
+                        <div class="student-angkatan">Angkatan 2023</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>SIS-23031</td>
+                  <td>Tangerang, Banten</td>
+                  <td>23 Feb 2006</td>
+                  <td><strong>Teknik Komputer & Jaringan</strong></td>
+                  <td><span class="badge-aktif"><span class="dot-green"></span> Aktif</span></td>
+                  <td><svg class="ui-icon row-chevron" aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="m6 3 5 5-5 5"></path></svg></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-footer">
+            <div>Menampilkan <strong>6</strong> dari <strong>1.248</strong> siswa</div>
+            <ul class="pagination-list">
+              <li><a href="#" class="page-btn" aria-label="Halaman sebelumnya"><svg class="ui-icon" aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="m10 3-5 5 5 5"></path></svg></a></li>
+              <li><a href="#" class="page-btn active">1</a></li>
+              <li><a href="#" class="page-btn">2</a></li>
+              <li><a href="#" class="page-btn">3</a></li>
+              <li><span class="page-btn">...</span></li>
+              <li><a href="#" class="page-btn">42</a></li>
+              <li><a href="#" class="page-btn" aria-label="Halaman berikutnya"><svg class="ui-icon" aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="m6 3 5 5-5 5"></path></svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer-custom">
+      <span>&copy; 2025 SiswaKita</span>
+      <span>Sistem Informasi Akademik &bull; v1.0</span>
+    </footer>
+  </div>
+
+  <script src="asssets/js/script.js"></script>
+</body>
+</html>
