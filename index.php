@@ -62,11 +62,7 @@ $stats = mysqli_fetch_assoc($stats_result);
 $program_result = database_result(mysqli_query($conn, "SELECT COUNT(*) AS total_jurusan FROM jurusan"));
 $total_jurusan = (int) mysqli_fetch_assoc($program_result)['total_jurusan'];
 
-$tahun_result = database_result(mysqli_query(
-    $conn,
-    "SELECT MAX(tahun_ajaran) AS tahun_ajaran FROM kelas"
-));
-$tahun_ajaran = mysqli_fetch_assoc($tahun_result)['tahun_ajaran'] ?: '-';
+$tahun_ajaran = $selected_tahun !== '' ? $selected_tahun : 'Semua Tahun';
 
 $jurusan_result = database_result(mysqli_query(
     $conn,

@@ -77,7 +77,7 @@ $values = [
 ];
 $error = '';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     foreach ($values as $field => $default) {
         $values[$field] = trim((string) ($_POST[$field] ?? $default));
     }
@@ -275,8 +275,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                       <option value="">Tanpa kelas (opsional)</option>
                       <?php foreach ($daftar_kelas as $kelas): ?>
                         <?php
-                          $tingkat_label = ['10' => 'X', '11' => 'XI', '12' => 'XII'][$kelas['tingkat']] ?? $kelas['tingkat'];
-                          $kelas_label = $kelas['tahun_ajaran'] . ' - ' . $tingkat_label . ' ' . $kelas['nama_kelas'];
+                          $kelas_label = $kelas['tahun_ajaran'] . ' - ' . $kelas['nama_kelas'];
                           if (!empty($kelas['nama_jurusan'])) {
                               $kelas_label .= ' (' . $kelas['nama_jurusan'] . ')';
                           }
